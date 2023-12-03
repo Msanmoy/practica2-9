@@ -4,30 +4,34 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/fontawesome/css/fontawesome.css">
+    <link href="css/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="css/fontawesome/css/solid.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body class="bg-light">
 <div class="container bg-white">
-    <div class="row border-bottom">
-        <div class="col-12 h2">Control de Acceso</div>
+    <div class="col-6 border-bottom">
+        <div class="col h2">Control de Acceso</div>
     </div>
 </div>
 <div class="container bg-light">
     <form method="post" action="jsp/validateAccess.jsp">
-        <div class="row body mt-2">
-            <div class="col-md-6 align-self-center">Usuario</div>
-            <div class="col-md-6 align-self-center"><input type="text" name="user"/></div>
-        </div>
-        <div class="row body mt-2">
-            <div class="col-md-6 align-self-center">Contraseña</div>
-            <div class="col-md-6 align-self-center"><input type="text" name="pass"/></div>
+        <div class="row mt-2">
+            <div class="col align-self-center">
+                <i class="fa-solid fa-circle-user"></i>
+                <input type="text" name="user" placeholder="Usuario"/>
+            </div>
         </div>
         <div class="row mt-2">
-            <div class="col-md-6">
-                &nbsp;
+            <div class="col align-self-center">
+                <i class="fa-solid fa-lock"></i>
+                <input type="text" name="pass" placeholder="Contraseña"/>
             </div>
-            <div class="col-md-6 align-self-center">
-                <input class="btn btn-primary" type="submit" value="ACEPTAR">
+        </div>
+        <div class="row mt-2">
+            <div class="col align-self-right">
+                <input class="btn btn-primary align-self-right" type="submit" value="ACEPTAR"></i>
             </div>
         </div>
     </form>
@@ -38,7 +42,7 @@
         if (error != null) {
     %>
     <div class="row mt-2">
-        <div class="col-6">
+        <div class="col-4 align-self-center">
             <div class="alert alert-danger alert-dismissible fade show">
                 <strong>Error!</strong> <%=error%>
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>

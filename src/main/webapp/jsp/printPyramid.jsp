@@ -11,7 +11,6 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
 </head>
 <body id="body-gatos">
@@ -26,7 +25,9 @@
 
         if(altura > 1){ // Mínimo para poder pintar la pirámide
             valida = true;
+        }else{
             session.setAttribute("error", "Cantidad demasiado pequeña");
+            response.sendRedirect("pyramidForm.jsp");
         }
 
     } catch (NumberFormatException e) {
@@ -52,9 +53,9 @@
         }
     }else{
             session.setAttribute("error", "Valor incorrecto");
+            response.sendRedirect("pyramidForm.jsp");
         }
 %>
 
-<script src="../js/bootstrap.bundle.js" ></script>
 </body>
 </html>

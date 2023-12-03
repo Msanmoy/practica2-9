@@ -14,6 +14,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/fontawesome/css/fontawesome.css">
+    <link href="../css/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="../css/fontawesome/css/solid.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
 </head>
 <body class="bg-light">
@@ -23,6 +26,12 @@
     boolean encontrado = false;
     String user = null;
     String pass = null;
+    String adminUser = "admin";
+    String adminPass = "123456";
+    String iconNormalAccess = "Acceso permitido a la aplicación";
+    String iconAdminAccess = "Tiene acceso al área de gestión de usuarios";
+    String messageNormalAccess = "<i class=\"fa-solid fa-unlock-keyhole\"></i>";
+    String messageAdminAccess = "<i class=\"fa-solid fa-key\"></i>";
     boolean flagValidaUserNull = false;
     boolean flagValidaUserBlank = false;
     boolean flagValidaPassNull = false;
@@ -95,26 +104,41 @@
                 System.out.println(resultUser.getString("pass"));
                 session.setAttribute("user", user); // IDentificamos usuario
 
+                String message = "";
+                String icon = "";
+                String actionDestiny = "";
+
+                if(user.equals(adminUser) && pass.equals(adminPass)){
+                    message = messageAdminAccess;
+                    icon = iconAdminAccess;
+                    actionDestiny = "listUsers.jsp";
+                }else{
+                    message = messageNormalAccess;
+                    icon = iconNormalAccess;
+                    actionDestiny = "pyramidForm.jsp";
+                }
+
 %>
             <%-- MUESTRO VENTANA ACCESO CORRECTO: --%>
             <div class="container bg-white">
-                <div class="row border-bottom">
-                    <div class="col-12 h2">Control de Acceso</div>
+                <div class="col-6 border-bottom">
+                    <div class="col h2">Control de Acceso</div>
                 </div>
             </div>
             <div class="container bg-light">
-                <form method="get" action="pyramidForm.jsp">
-                    <div class="row body mt-2">
-                        Icono
-                    </div>
-                    <div class="row body mt-2">
-                        Acceso permitido a la aplicación
+                <form id="accessForm" method="get" action="<%=actionDestiny%>">
+                    <div class="row mt-2">
+                        <div class="col">
+                            <%=icon%>
+                        </div>
                     </div>
                     <div class="row mt-2">
-                        <div class="col-md-6">
-                            &nbsp;
+                        <div class="col">
+                            <%=message%>                            &nbsp;
                         </div>
-                        <div class="col-md-6 align-self-center">
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
                             <input class="btn btn-primary" type="submit" value="ACEPTAR">
                         </div>
                     </div>
