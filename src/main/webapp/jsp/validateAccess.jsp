@@ -13,7 +13,8 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
 </head>
 <body class="bg-light">
 <%
@@ -52,8 +53,10 @@
 
         if (!flagValidaUserNull || !flagValidaUserBlank) {
             session.setAttribute("error", "Error en usuario");
+            System.out.println("seteo de error de validacion user");
         } else if (!flagValidaPassNull || !flagValidaPassBlank) {
             session.setAttribute("error", "Error en contraseña");
+            System.out.println("seteo de error de validacion pass");
         }
         valida = false;
     }
@@ -83,7 +86,9 @@
             ps.setString(idx++, user);
             ps.setString(idx++, pass);
 
+            System.out.println("antes del execute query");
             resultUser = ps.executeQuery();
+            System.out.println("despues del execute query");
 
             if(resultUser.next()){
                 System.out.println(resultUser.getString("user"));
@@ -116,14 +121,21 @@
                 </form>
             </div>
 <%
+            }else{
+                session.setAttribute("error", "Usuario no encontrado");
+                response.sendRedirect("../index.jsp");
+                System.out.println("error usuario no encontrado");
             }
 
         } catch (Exception ex) {
             ex.printStackTrace();
+                System.out.println(ex.getMessage());
         } finally {
             //BLOQUE FINALLY PARA CERRAR LA CONEXIÓN CON PROTECCIÓN DE try-catch
             //SIEMPRE HAY QUE CERRAR LOS ELEMENTOS DE LA  CONEXIÓN DESPUÉS DE UTILIZARLOS
-            //try { rs.close(); } catch (Exception e) { /* Ignored */ }
+            try {
+                resultUser.close();
+            } catch (Exception e) { /* Ignored */ }
             try {
                 ps.close();
             } catch (Exception e) { /* Ignored */ }
@@ -136,6 +148,7 @@
 
         // Devuelvo a formulario para mostrar el error:
         response.sendRedirect("../index.jsp");
+        System.out.println("error redireccion ultima");
     }
 %>
 

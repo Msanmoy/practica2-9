@@ -33,7 +33,7 @@
     </form>
     <%
         //                                                 v---- RECOGER MENSAJE DE ERROR DEL ÁMBITO request
-        String error = (String) request.getAttribute("error");
+        String error = (String)session.getAttribute("error");
 //            v---- SI ESTÁ PRESENTE INFORMAR DEL ERROR
         if (error != null) {
     %>
@@ -46,6 +46,7 @@
         </div>
     </div>
     <%
+            session.removeAttribute("error");
         }
     %>
 </div>

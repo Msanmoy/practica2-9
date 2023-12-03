@@ -26,6 +26,7 @@
 
         if(altura > 1){ // Mínimo para poder pintar la pirámide
             valida = true;
+            session.setAttribute("error", "Cantidad demasiado pequeña");
         }
 
     } catch (NumberFormatException e) {
@@ -49,7 +50,9 @@
         <br>
 <%
         }
-    }
+    }else{
+            session.setAttribute("error", "Valor incorrecto");
+        }
 %>
 
 <script src="../js/bootstrap.bundle.js" ></script>
