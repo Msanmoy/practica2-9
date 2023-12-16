@@ -9,42 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea379657-f6ef-48b7-b3b2-54050bf3e351" name="Changes" comment="funcionamiento de errores arreglado">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/HashPassword.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/css/all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/css/all.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/css/brands.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/css/brands.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/css/fontawesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/css/fontawesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/css/regular.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/css/regular.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/css/solid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/css/solid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/css/svg-with-js.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/css/svg-with-js.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/css/v4-font-face.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/css/v4-font-face.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/css/v4-shims.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/css/v4-shims.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/css/v5-font-face.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/css/v5-font-face.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/webfonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/webfonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/webfonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/webfonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/webfonts/fa-v4compatibility.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome/webfonts/fa-v4compatibility.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/createUSer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/deleteUser.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/listUsers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="ea379657-f6ef-48b7-b3b2-54050bf3e351" name="Changes" comment="terminado a falta de encriptacion">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesvdm/proyecto_jsp_jdbc/EncryptPass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/printPyramid.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/printPyramid.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/password.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/password.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/HashPassword.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/createUSer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/createUSer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/listUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/listUsers.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/pyramidForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/pyramidForm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/validateAccess.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/validateAccess.jsp" afterDir="false" />
     </list>
@@ -58,6 +31,7 @@
       <list>
         <option value="CSS File" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -87,13 +61,17 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Tomcat Server.Tomcat 10.1.12.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
+    "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/hector/Documentos/intellij_workspace/proyecto_jsp_jdbc/src/main/webapp/css",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -117,7 +95,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 10.1.12" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.12" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="proyecto_jsp_jdbc:war exploded">
           <settings>
@@ -198,9 +176,18 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="false" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="proyecto_jsp_jdbc:war exploded" />
+        </option>
       </method>
     </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-920bfa72" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -212,7 +199,12 @@
       <updated>1701518825307</updated>
       <workItem from="1701518826411" duration="20325000" />
       <workItem from="1701561817324" duration="3481000" />
-      <workItem from="1701603040315" duration="24713000" />
+      <workItem from="1701603040315" duration="24937000" />
+      <workItem from="1701678273867" duration="605000" />
+      <workItem from="1701680182178" duration="885000" />
+      <workItem from="1701689860042" duration="50000" />
+      <workItem from="1701690428685" duration="4502000" />
+      <workItem from="1702760184144" duration="3845000" />
     </task>
     <task id="LOCAL-00001" summary="casi terminado, a falta de detalles">
       <option name="closed" value="true" />
@@ -230,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701565281373</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="terminado a falta de encriptacion">
+      <option name="closed" value="true" />
+      <created>1701644491188</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701644491188</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +239,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="casi terminado, a falta de detalles" />
     <MESSAGE value="funcionamiento de errores arreglado" />
-    <option name="LAST_COMMIT_MESSAGE" value="funcionamiento de errores arreglado" />
+    <MESSAGE value="terminado a falta de encriptacion" />
+    <option name="LAST_COMMIT_MESSAGE" value="terminado a falta de encriptacion" />
   </component>
 </project>

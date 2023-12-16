@@ -175,6 +175,6 @@
         System.out.println("error redireccion ultima");
     }
 %>
-
+<script src="../js/bootstrap.bundle.js" ></script>
 </body>
 </html>

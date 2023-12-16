@@ -81,11 +81,13 @@
         }
 %>
 <form method="post" action="createUSer.jsp">
-    <div class="row mt-2">
+    <div class="row mt-4">
         <div class="col-6">
             <i class="fa-solid fa-circle-user"></i>
             <input type="text" name="user" placeholder="Usuario"/>
         </div>
+    </div>
+    <div class="row mt-2">
         <div class="col-6">
             <i class="fa-solid fa-lock"></i>
             <input type="text" name="pass" placeholder="Contraseña"/>
@@ -98,5 +100,6 @@
     </div>
 </form>
 </div>
+<script src="../js/bootstrap.bundle.js" ></script>
 </body>
 </html>
