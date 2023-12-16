@@ -99,16 +99,13 @@
             resultUser = ps.executeQuery();
 
             if(resultUser.next()){
-                System.out.println(resultUser.getString("user"));
-                System.out.println(resultUser.getString("pass"));
-                System.out.println(EncryptPass.hashPassword(resultUser.getString("pass")));
                 session.setAttribute("user", user); // IDentificamos usuario
 
                 String message = "";
                 String icon = "";
                 String actionDestiny = "";
 
-                if(user.equals(adminUser) && EncryptPass.hashPassword(pass).equals(adminPass)){
+                if(user.equals(adminUser) && pass.equals(adminPass)){
                     message = messageAdminAccess;
                     icon = iconAdminAccess;
                     actionDestiny = "listUsers.jsp";
