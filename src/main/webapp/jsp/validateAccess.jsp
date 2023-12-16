@@ -7,7 +7,7 @@
 --%>
 <%@page import="java.sql.*" %>
 <%@page import="java.util.Objects" %>
-<%@ page import="java.io.IOException" %>
+<%@ page import="org.iesvdm.proyecto_jsp_jdbc.EncryptPass" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -28,6 +28,7 @@
     String pass = null;
     String adminUser = "admin";
     String adminPass = "123456";
+    adminPass = EncryptPass.hashPassword(adminPass);
     String iconNormalAccess = "Acceso permitido a la aplicación";
     String iconAdminAccess = "Tiene acceso al área de gestión de usuarios";
     String messageNormalAccess = "<i class=\"fa-solid fa-unlock-keyhole\"></i>";
@@ -55,7 +56,7 @@
 
         if (request.getParameter("pass").isBlank()) throw new RuntimeException("Parámetro vacío o todo espacios blancos.");
         flagValidaPassBlank = true;
-        pass = request.getParameter("pass");
+        pass = EncryptPass.hashPassword(request.getParameter("pass"));
 
     } catch (Exception ex) {
         ex.printStackTrace();
@@ -93,22 +94,21 @@
             ps = conn.prepareStatement(sql);
             int idx = 1;
             ps.setString(idx++, user);
-            ps.setString(idx++, pass);
+            ps.setString(idx, pass);
 
-            System.out.println("antes del execute query");
             resultUser = ps.executeQuery();
-            System.out.println("despues del execute query");
 
             if(resultUser.next()){
                 System.out.println(resultUser.getString("user"));
                 System.out.println(resultUser.getString("pass"));
+                System.out.println(EncryptPass.hashPassword(resultUser.getString("pass")));
                 session.setAttribute("user", user); // IDentificamos usuario
 
                 String message = "";
                 String icon = "";
                 String actionDestiny = "";
 
-                if(user.equals(adminUser) && pass.equals(adminPass)){
+                if(user.equals(adminUser) && EncryptPass.hashPassword(pass).equals(adminPass)){
                     message = messageAdminAccess;
                     icon = iconAdminAccess;
                     actionDestiny = "listUsers.jsp";

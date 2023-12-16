@@ -28,7 +28,7 @@
         ResultSet listado = s.executeQuery ("SELECT * FROM password");
 %>
 <table>
-    <tr><th>Usuario</th><th>Contraseña</th></tr>
+    <tr><th> Usuario </th><th> Contraseña </th></tr>
     <%
         String usuarioNuevo = (String)session.getAttribute("user");
 
@@ -39,7 +39,8 @@
             <%= listado.getString("user")%>
         </td>
         <td>
-            <%= listado.getString("pass")%>
+             * * * * *
+            <!-- //listado.getString("pass") -->
         </td>
         <td>
             <form method="post" action="deleteUser.jsp">

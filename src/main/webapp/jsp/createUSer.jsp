@@ -7,6 +7,7 @@
 --%>
 <%@page import="java.sql.*" %>
 <%@page import="java.util.Objects" %>
+<%@ page import="org.iesvdm.proyecto_jsp_jdbc.EncryptPass" %>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -39,7 +40,7 @@
 
         if (request.getParameter("pass").isBlank()) throw new RuntimeException("Parámetro vacío o todo espacios blancos.");
         flagValidaPassBlank = true;
-        pass = request.getParameter("pass");
+        pass = EncryptPass.hashPassword(request.getParameter("pass"));
 
     } catch (Exception ex) {
         ex.printStackTrace();

@@ -9,13 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea379657-f6ef-48b7-b3b2-54050bf3e351" name="Changes" comment="terminado a falta de encriptacion">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesvdm/proyecto_jsp_jdbc/EncryptPass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ea379657-f6ef-48b7-b3b2-54050bf3e351" name="Changes" comment="Falla encriptacion, se queda como estaba">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/password.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/password.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/HashPassword.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/createUSer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/createUSer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/listUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/listUsers.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/pyramidForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/pyramidForm.jsp" afterDir="false" />
@@ -204,7 +199,7 @@
       <workItem from="1701680182178" duration="885000" />
       <workItem from="1701689860042" duration="50000" />
       <workItem from="1701690428685" duration="4502000" />
-      <workItem from="1702760184144" duration="3845000" />
+      <workItem from="1702760184144" duration="6567000" />
     </task>
     <task id="LOCAL-00001" summary="casi terminado, a falta de detalles">
       <option name="closed" value="true" />
@@ -230,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701644491188</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Falla encriptacion, se queda como estaba">
+      <option name="closed" value="true" />
+      <created>1702764362087</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702764362087</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +243,7 @@
     <MESSAGE value="casi terminado, a falta de detalles" />
     <MESSAGE value="funcionamiento de errores arreglado" />
     <MESSAGE value="terminado a falta de encriptacion" />
-    <option name="LAST_COMMIT_MESSAGE" value="terminado a falta de encriptacion" />
+    <MESSAGE value="Falla encriptacion, se queda como estaba" />
+    <option name="LAST_COMMIT_MESSAGE" value="Falla encriptacion, se queda como estaba" />
   </component>
 </project>
