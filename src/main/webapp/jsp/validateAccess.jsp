@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
-  User: hector
-  Date: 2/12/23
-  Time: 17:27
+  User: manup
+  Date: 12/12/2024
+  Time: 22:52
   To change this template use File | Settings | File Templates.
 --%>
 <%@page import="java.sql.*" %>
@@ -83,7 +83,7 @@
             //CARGA DEL DRIVER Y PREPARACIÓN DE LA CONEXIÓN CON LA BBDD
             //						v---------UTILIZAMOS LA VERSIÓN MODERNA DE LLAMADA AL DRIVER, no deprecado
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:30306/proyectoJSP", "root", "user");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/proyectoJSP", "root", "secret");
 
             String sql = "SELECT * FROM password WHERE user = " +
                     "?" + //user
@@ -92,9 +92,8 @@
             System.out.println(sql);
 
             ps = conn.prepareStatement(sql);
-            int idx = 1;
-            ps.setString(idx++, user);
-            ps.setString(idx, pass);
+            ps.setString(1, user);
+            ps.setString(2, pass);
 
             resultUser = ps.executeQuery();
 

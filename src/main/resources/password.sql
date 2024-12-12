@@ -18,7 +18,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `baloncesto`
 --
-CREATE DATABASE IF NOT EXISTS `proyectoJSP` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+DROP DATABASE IF EXISTS `proyectoJSP`
+CREATE DATABASE `proyectoJSP` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
 USE `proyectoJSP`;
 -- --------------------------------------------------------
 
@@ -37,9 +38,7 @@ CREATE TABLE IF NOT EXISTS `password` (
 INSERT INTO `password` (`user`, `pass`) VALUES
                                     ('admin', '123456'),
                                     ('tux', 'linux'),
-                                    ('usuario', 'usuario'),
-                                    ('root', 'toor'),
-                                    ('usuario2', '123');
+                                    ('usuario', 'usuario');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
-  User: hector
-  Date: 3/12/23
-  Time: 15:52
+  User: manup
+  Date: 12/12/2024
+  Time: 22:52
   To change this template use File | Settings | File Templates.
 --%>
 <%@page import="java.sql.Statement"%>
@@ -22,7 +22,7 @@
 <%
     try{
         Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:30306/proyectoJSP","root", "user");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/proyectoJSP","root", "secret");
         Statement s = conn.createStatement();
 
         ResultSet listado = s.executeQuery ("SELECT * FROM password");
